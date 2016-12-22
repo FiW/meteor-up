@@ -186,8 +186,8 @@ export function start(api) {
     script: path.resolve(__dirname, 'assets/meteor-deploy-check.sh'),
     vars: {
       deployCheckWaitTime: config.deployCheckWaitTime || 60,
-      appName: config.name,
-      port: config.env.PORT || 80
+      deployCheckUrl: config.deployCheckUrl || 'http://localhost:' + (config.env.PORT || 80),
+      appName: config.name
     }
   });
 
